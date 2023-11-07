@@ -1,0 +1,16 @@
+.wrapper{
+    width: 1376px;
+    height: 433px;
+}
+
+.text{
+    width: 271px;
+    height: 42px;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 60px 585px 331px 584px;
+    margin: 0;
+}
