@@ -1,21 +1,32 @@
 .wrapper{
     display: flex;
-    justify-content: end;
-    max-width: 1376px;
+    justify-content: center;
+    align-items: center;
     max-height: 80px;
+
 }
 .img{
     width: 38px;
     height: 40px;
-    margin:16px 580px 16px  ;
 }
 .item{
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #14171F;
     margin: 30px  50px 30px ;
     background-color: #FFF;
     white-space:  nowrap;
+}
+@media screen and (max-width: 768px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: max-content;
+        position: relative;
+
+
+    }
+    .item{
+        font-size: 18px;
+        margin: 5px  auto ;
+    }
 }
