@@ -7,6 +7,7 @@ import vkontakte from '../images/vk-icon.svg'
 
 
 export const Contacts = () => {
+
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
@@ -17,11 +18,18 @@ export const Contacts = () => {
             </div>
             <div className={s.containerSocial}>
                 <img src={image} alt={'img'} className={s.img}/>
-                <span><div className={s.colorText}> Our social:</div></span>
+                <span><div className={s.colorText}> Наши социальные сети:</div></span>
                 <div className={s.socialIcon}>
-                    <img src={instagram} alt="img" className={s.img}/>
-                    <img src={telegram} alt="img" className={s.img}/>
-                    <img src={vkontakte} alt="img" className={s.img}/>
+                    <a href={"https://www.instagram.com/maliarni_raboti?igsh=MXQ4bzYxN3B0MWt4aw=="} target="_blank"
+                       rel="noopener noreferrer">
+                        <img src={instagram} alt="img" className={s.img}/>
+                    </a>
+                    <a href={'http://t.me/+375298665173'} target="_blank">
+                        <img src={telegram} alt="img" className={s.img}/>
+                    </a>
+                    <a href={'https://vk.com/id331033132'}>
+                        <img src={vkontakte} alt="img" className={s.img}/>
+                    </a>
                 </div>
             </div>
         </div>

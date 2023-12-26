@@ -9,6 +9,11 @@
     height: 40px;
     margin: 10px 10px;
 }
+img:hover{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
 
 .container {
     display: flex;
