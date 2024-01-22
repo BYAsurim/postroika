@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/postroika/static/css/main.3c79ff52.css",
-    "main.js": "/postroika/static/js/main.cf456eae.js",
+    "main.css": "/postroika/static/css/main.6ec58129.css",
+    "main.js": "/postroika/static/js/main.21113f59.js",
     "static/js/787.2992dc18.chunk.js": "/postroika/static/js/787.2992dc18.chunk.js",
     "static/media/background.jpeg": "/postroika/static/media/background.6d2e834d405fa4237c8b.jpeg",
     "static/media/painter.jpg": "/postroika/static/media/painter.27d000fbb8f72dfa789f.jpg",
@@ -10,12 +10,12 @@
     "static/media/telegram-icon.svg": "/postroika/static/media/telegram-icon.940c9ef62751e1347c6317bf8e461080.svg",
     "static/media/vk-icon.svg": "/postroika/static/media/vk-icon.24395c85441e163ddc35109de716da3c.svg",
     "index.html": "/postroika/index.html",
-    "main.3c79ff52.css.map": "/postroika/static/css/main.3c79ff52.css.map",
-    "main.cf456eae.js.map": "/postroika/static/js/main.cf456eae.js.map",
+    "main.6ec58129.css.map": "/postroika/static/css/main.6ec58129.css.map",
+    "main.21113f59.js.map": "/postroika/static/js/main.21113f59.js.map",
     "787.2992dc18.chunk.js.map": "/postroika/static/js/787.2992dc18.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c79ff52.css",
-    "static/js/main.cf456eae.js"
+    "static/css/main.6ec58129.css",
+    "static/js/main.21113f59.js"
   ]
 }
