@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Contacts.module.css'
-import image from "../images/painter.jpg";
-import instagram from '../images/instagram-icon.svg'
-import telegram from '../images/telegram-icon.svg'
-import vkontakte from '../images/vk-icon.svg'
+import image from "../../images/painter.jpg";
+import instagram from '../../images/instagram-icon.svg'
+import telegram from '../../images/telegram-icon.svg'
+import vkontakte from '../../images/vk-icon.svg'
 
 
 export const Contacts = () => {

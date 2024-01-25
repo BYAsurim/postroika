@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Reputation.module.css'
 import {ReviewComponent} from "./ReviewComponent";
-import icon from '../images/icon.svg'
+import icon from '../../images/icon.svg'
 
 export const Reputation = () => {
 

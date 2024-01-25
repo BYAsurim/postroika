@@ -7,7 +7,6 @@ import {Contacts} from "../contacts/Contacts";
 const Home = () => {
     return (
         <div>
-            <Navbar/>
             <HomePage/>
             <Reputation/>
             <Contacts/>
