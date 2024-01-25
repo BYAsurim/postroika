@@ -2,7 +2,7 @@
   "name": "postroika",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://BYAsurim.github.io/postroika",
+  "homepage": "https://BYAsurim.github.io/postroika/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
