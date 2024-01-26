@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from "../navbar/Navbar";
 import {HomePage} from "../main/HomePage";
-import {Reputation} from "../reputation/Reputation";
+import {Reputation} from "../../featuers/reputation/Reputation";
 import {Contacts} from "../contacts/Contacts";
 
 const Home = () => {

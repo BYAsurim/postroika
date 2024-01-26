@@ -3,22 +3,24 @@ import s from './ReviewComponent.module.css'
 
 type ReviewComponentPropsType = {
     img: string
-    title: string
+    name: string
     comment: string
 }
 
 export const ReviewComponent: React.FC<ReviewComponentPropsType> = ({
                                                                         img,
-                                                                        title,
+                                                                        name,
                                                                         comment
                                                                     }) => {
 
 
     return (
         <div className={s.wrapper}>
+            <div className={s.imgName}>
             <img src={img} alt="icon" className={s.icon}/>
-            <span>{title}</span>
-            <span>{comment}</span>
+            <div>{name}</div>
+            </div>
+            <div>{comment}</div>
 
         </div>
     );
