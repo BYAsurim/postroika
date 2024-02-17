@@ -20,7 +20,7 @@ export const ReviewComponent: React.FC<ReviewComponentPropsType> = ({
             <img src={img} alt="icon" className={s.icon}/>
             <div>{name}</div>
             </div>
-            <div>{comment}</div>
+            <div className={s.comment}>{comment}</div>
 
         </div>
     );
