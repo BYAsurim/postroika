@@ -1,6 +1,7 @@
 .wrapper {
-
-
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F6;
 }
 
 .text {
@@ -17,7 +18,60 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1100px;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addReview {
+    all: unset;
+    cursor: pointer;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    width: 169px;
+    height: 38px;
+    background-color: #FFFFFF;
+
+
+    font-size: 15px;
+    text-align: center;
+    color: #2B2B2B;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 50px 0 auto;
+
+    &:hover {
+        background-color: #FFB400;
+        transition: 0.2s ease-in;
+    }
+}
+
+.bg {
+    z-index: 10;
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    z-index: 20;
+    position: fixed;
+    transition: 0.2s ease-in;
+    transform: translate(-50%, -50%);
+
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
 }
 
 @media screen and (max-width: 768px) {
@@ -26,5 +80,10 @@
         flex-direction: column;
         align-items: center;
         max-width: 768px;
+    }
+
+    .addReview {
+        margin: 20px auto 0;
+
     }
 }

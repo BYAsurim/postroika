@@ -3,8 +3,8 @@ import s from './ReviewComponent.module.css'
 
 type ReviewComponentPropsType = {
     img: string
-    name: string
-    comment: string
+    name: string | null
+    comment: string | null
 }
 
 export const ReviewComponent: React.FC<ReviewComponentPropsType> = ({
@@ -17,11 +17,10 @@ export const ReviewComponent: React.FC<ReviewComponentPropsType> = ({
     return (
         <div className={s.wrapper}>
             <div className={s.imgName}>
-            <img src={img} alt="icon" className={s.icon}/>
-            <div>{name}</div>
+                <img src={img} alt="icon"/>
+                <p className={s.name}>{name}</p>
             </div>
-            <div className={s.comment}>{comment}</div>
-
+            <p className={s.comment}>{comment}</p>
         </div>
     );
 };
