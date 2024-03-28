@@ -29,7 +29,3 @@ export const fetchDataFromFirestore = async () => {
     }
 };
 
-export type commentsResponseType = {
-    name: string,
-    comment: string,
-}

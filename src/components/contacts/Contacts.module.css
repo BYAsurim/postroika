@@ -2,6 +2,7 @@
     min-height: 337px;
     display: flex;
     justify-content: space-evenly;
+    background-color: #F0F0F6;
 }
 
 .img {
@@ -9,7 +10,7 @@
     height: 40px;
     margin: 10px 10px;
 }
-img:hover{
+.img:hover{
     width: 41px;
     height: 41px;
     cursor: pointer;
