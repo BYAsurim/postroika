@@ -1,15 +1,58 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    background-color: #f0f0f6;
+    height: 100%;
+
 }
 
 .title {
-    margin: 50px 0 10px 50px;
+    display: inline-block;
+    margin: 50px 0 35px 10px;
     white-space: nowrap;
+    align-self: start;
+    font-weight: bold;
+    font-size: 24px;
+
+    &:before {
+        content: '';
+        display: block;
+        position: relative;
+        background-color: #FFB400;
+        width:100%;
+        height: 4px;
+        top: 30px;
+    }
 }
-.content{
-    margin: 0 20px 0 20px;
+
+.content {
+    margin: 0 20px 80px 20px;
     max-width: 1000px;
     text-align: left;
+}
+.img{
+    background-image: url("../../images/malyarnoShtukaturnye.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    width: 1000px;
+    margin: auto 0;
+}
+.checkMark{
+    height: 12px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+.img{
+    max-width: 500px;
+    min-height: 300px;
+}
+}
+
+@media screen and (max-width: 365px) {
+    .img{
+        max-width: 300px;
+        min-height: 150px;
+    }
 }

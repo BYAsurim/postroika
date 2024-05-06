@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Contacts.module.css'
-import image from "../../images/painter.jpg";
+import logo from "../../images/logo.svg";
 import instagram from '../../images/instagram-icon.svg'
 import telegram from '../../images/telegram-icon.svg'
 import vkontakte from '../../images/vk-icon.svg'
@@ -11,13 +11,13 @@ export const Contacts = () => {
     return (
         <div className={s.wrapper}>
             <div className={s.container}>
-                <span className={s.text}><div className={s.colorText}> adress:</div> 6391 Elgin St. Celina, Delaware 10299</span>
-                <span className={s.text}><div className={s.colorText}> Phone:</div> +84 1102 2703</span>
+                <span className={s.text}><div className={s.colorText}> Наш адрес:</div> 6391 Elgin St. Celina, Delaware 10299</span>
+                <span className={s.text}><div className={s.colorText}> Телефон:</div> +84 1102 2703</span>
                 <span className={s.text}><div className={s.colorText}>Email:</div> hello@thebox.com</span>
 
             </div>
             <div className={s.containerSocial}>
-                <img src={image} alt={'img'} className={s.img}/>
+                <img src={logo} alt={'img'} className={s.logo}/>
                 <span><div className={s.colorText}> Наши социальные сети:</div></span>
                 <div className={s.socialIcon}>
                     <a href={"https://www.instagram.com/maliarni_raboti?igsh=MXQ4bzYxN3B0MWt4aw=="} target="_blank"

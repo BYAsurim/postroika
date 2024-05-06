@@ -1,18 +1,25 @@
 .wrapper {
     min-height: 337px;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     background-color: #F0F0F6;
 }
 
+.logo {
+    width: 100px;
+    height: 60px;
+}
+
 .img {
     width: 40px;
     height: 40px;
-    margin: 10px 10px;
+    padding: 5px 5px;
+    margin: 0 10px;
 }
-.img:hover{
-    width: 41px;
-    height: 41px;
+
+.img:hover {
+    padding: 0;
     cursor: pointer;
 }
 
