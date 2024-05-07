@@ -1,9 +1,10 @@
 import React from 'react';
 import s from './AboutUs.module.css'
 import checkMark from '../../images/checkMark.svg'
+import {ContactsFooter} from "../contactsFooter/ContactsFooter";
 
 export const AboutUs = () => {
-    return (<>
+    return (
         <div className={s.wrapper}>
             <div className={s.content}>
                 <div className={s.title}>О нас</div>
@@ -54,8 +55,8 @@ export const AboutUs = () => {
                 </div>
 
             </div>
-
+            <ContactsFooter/>
         </div>
-    </>);
+    );
 };
 

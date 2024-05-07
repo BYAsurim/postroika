@@ -27,7 +27,7 @@
 }
 
 .content {
-    margin: 0 20px 80px 20px;
+    margin: 0 20px 0 20px;
     max-width: 1000px;
     text-align: left;
 }
@@ -37,7 +37,7 @@
     background-size: cover;
     min-height: 500px;
     width: 1000px;
-    margin: auto 0;
+    margin: 30px 0;
 }
 .checkMark{
     height: 12px;
