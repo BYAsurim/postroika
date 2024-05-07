@@ -11,10 +11,10 @@ export const PATH ={
     ABOUT_US: '/about',
     PROJECTS: '/projects',
     CONTACTS: '/contact',
-}
+} as const
 
 
-const Pages = () => {
+export const Pages = () => {
     return (
         <div>
             <Routes>
@@ -29,4 +29,3 @@ const Pages = () => {
     );
 };
 
-export default Pages;

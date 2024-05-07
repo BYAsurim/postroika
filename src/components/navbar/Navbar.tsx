@@ -19,7 +19,9 @@ const Navbar: FC<PropsType> = ({open, handleClose, handleOpen}) => {
         <nav>
             <div className={s.wrapper}>
                 <div >
+                    <Link to={PATH.HOME}>
                     <img className={s.logo} src={image} alt={'img'}/>
+                    </Link>
                 </div>
                 <div className={s.wrapperLink}>
                     <Link to={PATH.HOME} className={s.link}>

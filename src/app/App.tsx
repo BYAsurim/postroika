@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './App.module.css';
-import Pages from "../components/Pages/Pages";
+import {Pages} from "../components/Pages/Pages";
 import Layout from "../components/lauout/Layout";
 import '../firebase';
 
