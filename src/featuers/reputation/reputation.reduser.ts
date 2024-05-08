@@ -1,28 +1,47 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {fetchDataFromFirestore, setDataToFirestore} from "./stateReputation";
 
 const initialState = {
-    name: '' as string | null,
-    comment: '' as string | null,
-    reputation: null as commentsResponseType | null
-
+    reputation: null as commentsResponseType[] | null
 };
-
-export type AppInitialStateType = typeof initialState;
+export const fetchReputationData = createAsyncThunk<{
+    reputation: commentsResponseType[]
+}, undefined>('reputation/fetchData', async (_, thunkAPI) => {
+    try {
+        const res = await fetchDataFromFirestore()
+        return {reputation: res}
+    } catch (e) {
+        return thunkAPI.rejectWithValue('Error fetching data')
+    }
+})
+export const addReview = createAsyncThunk<{ name: string, comment: string }, {
+    name: string,
+    comment: string
+}>('reputation/addReview', async (param, thunkAPI) => {
+    try {
+        await setDataToFirestore(param.name, param.comment)
+        return param
+    } catch (e) {
+        return thunkAPI.rejectWithValue('Error fetching data')
+    }
+})
 
 
 const slice = createSlice({
     name: "reputation",
     initialState,
-    reducers: {
-        setReputationData: (state, action: PayloadAction<{ name: string | null, comment: string | null }>) => {
-
-        }
-    },
+    reducers: {},
+    extraReducers: builder => {
+        builder.addCase(fetchReputationData.fulfilled, (_, action) => {
+            return action.payload
+        })
+            .addCase(addReview.fulfilled, (state, action) => {
+                state.reputation?.unshift(action.payload)
+            })
+    }
 });
 
 export const reputationReducer = slice.reducer;
-export const reputationActions = slice.actions;
-
 
 //type
 export type commentsResponseType = {

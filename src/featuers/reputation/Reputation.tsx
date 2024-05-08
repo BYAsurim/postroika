@@ -2,49 +2,28 @@ import React, {useEffect, useState} from 'react';
 import s from './Reputation.module.css'
 import {ReviewComponent} from "./review/ReviewComponent";
 import icon from '../../images/icon.svg'
-
-import { fetchDataFromFirestore, setDataToFirestore} from "./stateReputation";
 import AliceCarousel from "react-alice-carousel";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import {ReputationForm} from "../../components/reputationForm/ReputationForm";
-import {commentsResponseType} from "./reputation.reduser";
+import {fetchReputationData} from "./reputation.reduser";
+import {useAppDispatch, useAppSelector} from "../../common/hooks/hooks";
 
 export const Reputation = () => {
+
+    const reputation = useAppSelector(state => state.comments.reputation)
+    const dispatch = useAppDispatch()
+
     useEffect(() => {
-        fetchDataFromFirestore()
-            .then(res => {
-
-                setContent2(res)
-                console.log(res)
-
-            })
-            .catch(rej => {
-                console.log(rej)
-            })
-
+        dispatch(fetchReputationData())
     }, []);
 
-
-    const [content2, setContent2] = useState<commentsResponseType[]>([])
-    const [name, setName] = useState('');
-    const [comment, setComment] = useState('');
     const [open, isOpen] = useState(false)
-
-    const saveDataToFirestore = () => {
-        setDataToFirestore(name, comment)
-            .then(() => {
-                setContent2([{name: name, comment: comment}, ...content2])
-            })
-        setName('')
-        setComment('')
-    }
 
 
     const responsive = {
         365: {items: 1},
         768: {items: 2},
         1024: {items: 3}
-
     }
 
 
@@ -54,7 +33,7 @@ export const Reputation = () => {
 
             <div className={s.container}>
                 <AliceCarousel mouseTracking
-                               items={content2?.map((el, index) => {
+                               items={reputation?.map((el, index) => {
                                    return <ReviewComponent
                                        key={index}
                                        img={icon}
@@ -72,26 +51,12 @@ export const Reputation = () => {
 
             {open && <div className={s.bg} onClick={() => isOpen(!open)}></div>}
             <aside className={s.modal}>
-                {open && <ReputationForm isOpen={isOpen}/>}
+                {open &&
+                    <ReputationForm
+                        isOpen={isOpen}
+                    />
+                }
             </aside>
-
-            <div>
-                <p>Save Data to Firebase Firestore</p>
-                <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-
-                />
-                <input
-                    type="text"
-                    value={comment}
-                    onChange={(e) => setComment(e.target.value)}
-                />
-                <button onClick={saveDataToFirestore}>Save to Firestore</button>
-
-            </div>
-
         </div>
     );
 };

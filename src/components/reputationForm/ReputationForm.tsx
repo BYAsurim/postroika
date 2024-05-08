@@ -3,11 +3,15 @@ import {ErrorMessage, Field, Form, Formik} from 'formik';
 import s from './ReputationForm.module.css'
 import button from '../../featuers/reputation/Reputation.module.css'
 import closeIcon from "../../images/closeOutline.svg";
+import {useAppDispatch} from "../../common/hooks/hooks";
+import {addReview} from "../../featuers/reputation/reputation.reduser";
 
 type Props = {
-    isOpen: (value:boolean)=>void
+    isOpen: (value: boolean) => void
 }
-export const ReputationForm = ({isOpen}:Props) => {
+export const ReputationForm = ({isOpen}: Props) => {
+    const dispatch = useAppDispatch()
+
     return (
         <div className={s.wrapper}>
             <h3 className={s.h3}>ОСТАВИТЬ ОТЗЫВ</h3>
@@ -15,23 +19,23 @@ export const ReputationForm = ({isOpen}:Props) => {
                 <img src={closeIcon} alt="close" onClick={() => isOpen(false)}/>
             </button>
             <Formik
-                initialValues={{name: '', message: ''}}
+                initialValues={{name: '', comment: ''}}
                 validate={values => {
-                    const errors = {};
                     if (!values.name) {
-                        // errors.email= 'Required';
-                    } else if (
-                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.name)
-                    ) {
-                        // errors.email = 'Invalid email address';
+                        return {
+                            name: 'Name is required'
+                        }
                     }
-                    return errors;
+                    else if(!values.comment) {
+                        return {
+                            comment: 'comment is required'
+                        }
+                    }
+                    // else if (/^[a-zA-Zа-яА-ЯёЁ\s]+$/.test(values.name)) {return {name: 'send correctly name'}}
                 }}
-                onSubmit={(values, {setSubmitting}) => {
-                    setTimeout(() => {
-                        alert(JSON.stringify(values, null, 2));
-                        setSubmitting(false);
-                    }, 400);
+                onSubmit={(values) => {
+                    dispatch(addReview({name: values.name, comment: values.comment}))
+                    isOpen(false)
                 }}
             >
                 {({isSubmitting}) => (
@@ -43,16 +47,15 @@ export const ReputationForm = ({isOpen}:Props) => {
                         </div>
                         <div className={s.wrapperTitleAndField}>
                             <span className={s.titleField}>Отзыв</span>
-                            <Field as={'textarea'} name="message" className={s.field} placeholder={'Отзыв'}/>
-                            <ErrorMessage name="message" component="div"/>
+                            <Field as={'textarea'} name="comment" className={s.field} placeholder={'Отзыв'}/>
+                            <ErrorMessage name="comment" component="div"/>
                         </div>
                         <button type="submit" disabled={isSubmitting} className={`${button.addReview} ${s.button}`}>
-                            Submit
+                            Отправить
                         </button>
                     </Form>
                 )}
             </Formik>
-
         </div>
     );
 };
