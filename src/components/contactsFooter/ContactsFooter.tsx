@@ -7,7 +7,6 @@ import vkontakte from '../../images/vk-icon.svg'
 
 
 export const ContactsFooter = () => {
-
     return (
         <footer className={s.wrapper}>
             <div className={s.container}>
@@ -33,7 +32,6 @@ export const ContactsFooter = () => {
                 </div>
             </div>
         </footer>
-
     );
 };
 

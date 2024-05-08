@@ -1,6 +1,7 @@
 import React, {FC, ReactNode, useState} from 'react';
 import Navbar from "../navbar/Navbar";
 import s from './Layout.module.css'
+import {ContactsFooter} from "../contactsFooter/ContactsFooter";
 
 type PropsType = {
     children: ReactNode
@@ -16,6 +17,7 @@ const Layout: FC<PropsType> = ({children}) => {
             <div>
                 {children}
             </div>
+            <ContactsFooter/>
         </>
     );
 };

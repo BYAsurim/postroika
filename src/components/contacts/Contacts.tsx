@@ -31,8 +31,7 @@ export const Contacts = () => {
                     <span>Без выходных с 10:00 до 21:00</span>
                 </div>
             </div>
-                <GoogleCard/>
-
+            <GoogleCard/>
         </div>
     );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './AboutUs.module.css'
 import checkMark from '../../images/checkMark.svg'
-import {ContactsFooter} from "../contactsFooter/ContactsFooter";
 
 export const AboutUs = () => {
     return (
@@ -55,7 +54,6 @@ export const AboutUs = () => {
                 </div>
 
             </div>
-            <ContactsFooter/>
         </div>
     );
 };
