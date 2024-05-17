@@ -1,19 +1,24 @@
 import React, {useEffect} from 'react';
-import {fetchImageName} from "./ourWorks.reducer";
 import {useAppDispatch} from "../../common/hooks/hooks";
+import s from './ourWorks.module.css'
+import {fetchImageUrl} from "./ourWorks.reducer";
+
 
 export const OurWorks = () => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        // fetchImage().then(res => {
-        //     // res && setUrl(res)
-        // })
-        dispatch(fetchImageName())
+        dispatch(fetchImageUrl())
     })
+
+
     return (
-        <div>
-            <img src={'url'} alt="img"/>
+        <div className={s.wrapper}>
+            <div className={s.title}>Наши работы</div>
+            <div>
+                <img src={'url'} alt="img"/>
+
+            </div>
 
         </div>
 
