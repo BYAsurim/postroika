@@ -9,7 +9,6 @@ const initialState = {
     loading: false,
 }
 
-
 export const fetchImageUrl = createAsyncThunk<WorksResponseType[], undefined>('ourWorks/fetchImageUrl', async (_, thunkAPI) => {
     const {rejectWithValue, getState, dispatch} = thunkAPI
     try {
@@ -34,21 +33,12 @@ export const fetchImageUrl = createAsyncThunk<WorksResponseType[], undefined>('o
                 }
             }
         }
-        console.log(result)
-
         return result
     } catch(e) {
         console.log(e)
         return rejectWithValue('error')
     }
 })
-type WorksResponseType = {
-    prefix: string | null,
-    url: string[]
-}
-
-
-
 
 
 export const fetchPrefixFolder = createAsyncThunk<{
@@ -94,6 +84,10 @@ const slice = createSlice({
     }
 })
 
+type WorksResponseType = {
+    prefix: string | null,
+    url: string[]
+}
 
 
 export const ourWorksReducer = slice.reducer
