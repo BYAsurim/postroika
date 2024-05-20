@@ -2,8 +2,8 @@ import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../../common/hooks/hooks";
 import s from './ourWorks.module.css'
 import {fetchPrefixFolder} from "./ourWorks.reducer";
-import {Work} from "./work/Work";
-import {Route, Routes} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {PATH} from "../../components/Pages/Pages";
 
 
 export const OurWorks = () => {
@@ -16,21 +16,26 @@ export const OurWorks = () => {
         , [])
     const dispatch = useAppDispatch()
     const works = useAppSelector(state => state.ourWorks.works)
-
+    console.log(works)
 
     return (
-        <div className={s.wrapper}>
+        <section className={s.wrapper}>
             <div className={s.title}>Наши работы</div>
 
-            <Routes>
+            <div className={s.list}>
                 {
-                    Object.keys(works).map((key) => (
-                        <Route path={'/'} element={<Work key={key} prefix={key} url={works[key]}/>}/>
+                    Object.keys(works).map((key, index) => (
+                        <Link key={index} to={`${PATH.PROJECTS}/${key}`} className={s.work}>
+                            <div className={s.image}
+                                 style={{backgroundImage:`url(${works[key][0]})`}}/>
+                            <div className={s.info}>{key}</div>
+                        </Link>
                     ))
                 }
-            </Routes>
+            </div>
 
-        </div>
+
+        </section>
     )
 };
 

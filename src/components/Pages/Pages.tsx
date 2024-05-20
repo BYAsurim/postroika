@@ -4,6 +4,8 @@ import Home from "../home/Home";
 import {AboutUs} from "../aboutUs/AboutUs";
 import {Projects} from "../projects/Projects";
 import {Contacts} from "../contacts/Contacts";
+import {useAppSelector} from "../../common/hooks/hooks";
+import {Work} from "../../featuers/ourWorks/work/Work";
 
 
 export const PATH ={
@@ -15,6 +17,8 @@ export const PATH ={
 
 
 export const Pages = () => {
+    const works = useAppSelector(state => state.ourWorks.works)
+
     return (
         <div>
             <Routes>
@@ -24,6 +28,12 @@ export const Pages = () => {
                 <Route path={PATH.CONTACTS} element={<Contacts/>}/>
                 <Route path='/404' element={<h1>404: PAGE NOT FOUND</h1>}/>
                 <Route path='*' element={<Navigate to={'/404'}/>}/>
+
+                {
+                    Object.keys(works).map((key, index)=>(
+                        <Route key={index} path={`${PATH.PROJECTS}/${key}`} element={<Work prefix={key} url={works[key]} />} />
+                    ))
+                }
             </Routes>
         </div>
     );

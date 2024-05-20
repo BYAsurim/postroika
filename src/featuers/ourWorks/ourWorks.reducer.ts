@@ -50,7 +50,7 @@ const slice = createSlice({
     }
 })
 
-type WorksResponseType = {
+export type WorksResponseType = {
     [key: string]: string[]
 }
 

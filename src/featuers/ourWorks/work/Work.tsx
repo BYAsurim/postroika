@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import s from './work.module.css'
 
 type WorkProps = {
     prefix: string
@@ -13,11 +14,13 @@ export const Work: FC<WorkProps> = ({prefix, url}) => {
 
             <div>
                 <div>{prefix}</div>
+
                 {url.map((url, index) => (
-                    <img src={url} key={index} alt={`img ${url}`}/>
+                    <div className={s.imgContainer} key={index}>
+                    <img src={url} key={index} alt={`img ${url}`} className={s.img}/>
+                    </div>
                 ))}
             </div>
-
         </div>
     );
 };
