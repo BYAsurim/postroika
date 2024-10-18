@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './ContactsFooter.module.css'
-import logo from "../../images/logo.svg";
 import instagram from '../../images/instagram-icon.svg'
 import telegram from '../../images/telegram-icon.svg'
 import vkontakte from '../../images/vk-icon.svg'
@@ -16,7 +15,7 @@ export const ContactsFooter = () => {
 
             </div>
             <div className={s.containerSocial}>
-                <img src={logo} alt={'img'} className={s.logo}/>
+                <img src={'#'} alt={'img'} className={s.logo}/>
                 <span><div className={s.colorText}> Наши социальные сети:</div></span>
                 <div className={s.socialIcon}>
                     <a href={"https://www.instagram.com/maliarni_raboti?igsh=MXQ4bzYxN3B0MWt4aw=="} target="_blank"

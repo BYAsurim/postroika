@@ -1,22 +1,30 @@
 .wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-height: 80px;
     padding: 20px;
-    background-color: #F0F0F6;
+    background: #FFF;
     color: #333;
-    font-weight: bold;
 }
 
 .wrapperLink {
     display: flex;
-    justify-content: end;
+    gap: 40px;
+}
 
+.logoWrapper {
+    display: flex;
+    align-items: center;
+}
 
+.logoText {
+    position: relative;
+    z-index: 1;
 }
 
 .logo {
+    position: absolute;
     width: 100px;
     height: 60px;
 }
@@ -26,17 +34,34 @@
 }
 
 .link:hover {
-    text-decoration: underline #69696a;
-    text-shadow: 1px 0 #bdbdbd;
+    text-decoration: underline #045099;
+    text-shadow: 1px 0 #045099;
 }
 
 .item {
-    font-size: 18px;
-    margin: 20px 30px 20px;
-    background-color: #F0F0F6;
+    background: #FFF;
     white-space: nowrap;
-    color: #000000;
+    letter-spacing: -0.2px;
+}
 
+.item:hover {
+    color: #045099;
+}
+
+.buttonNumber {
+    all: unset;
+    border-radius: 3px;
+    background: #045099;
+    width: 212px;
+    height: 42px;
+    color: #FFF;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.buttonNumber:hover {
+    opacity: 1;
 }
 
 .background {
@@ -117,5 +142,4 @@
     .burger:hover {
         cursor: pointer;
     }
-
 }
