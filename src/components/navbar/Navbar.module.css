@@ -5,7 +5,6 @@
     max-height: 80px;
     padding: 20px;
     background: #FFF;
-    color: #333;
 }
 
 .wrapperLink {
@@ -87,7 +86,7 @@
     left: -317px;
     top: 0;
 
-    background: #F0F0F6;
+    background: #FFFFFF;
 }
 
 .sidebar.open {
@@ -97,6 +96,10 @@
     left: 0;
     box-shadow: 0 10px 40px rgba(29, 33, 38, 0.13),
     0 1px 2px rgba(29, 33, 38, 0.1);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .close {
@@ -131,15 +134,28 @@
         height: 24px;
         width: 24px;
         left: 15px;
-        top: 15px
+        top: 15px;
+        color: #FFFFFF;
     }
 
     .burger img {
         height: 24px;
         width: 24px;
+
     }
 
     .burger:hover {
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapperLink {
+        gap: 20px;
+    }
+
+    .buttonNumber {
+        width: 180px;
+        font-size: 14px;
     }
 }

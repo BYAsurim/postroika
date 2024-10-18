@@ -1,60 +1,113 @@
 .backgroundImg {
-    background-image: url("../../images/background.webp");
+    background-image: url("../../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 646px;
+    min-height: 800px;
 }
 
 .container {
     display: flex;
-    align-items: flex-end;
     flex-direction: column;
-    align-content: flex-end;
-    margin-right: 100px;
+    align-items: start;
+    justify-content: center;
+    margin-left: 260px;
 }
 
 .h1 {
-    line-height: normal;
-    padding: 200px 0 50px;
-    font-size: 35px;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    max-width: 556px;
-    margin: 0;
-    color: #000;
+    margin: 225px 0 0 0;
+    font-size: 84px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -2.52px;
+    color: #FAFAFA;
+    text-align: left;
+
 }
 
 .text {
-    max-width: 556px;
+    max-width: 383px;
+    color: #FAFAFA;
+    font-weight: 400;
+    font-size: 17px;
+    margin-top: 20px;
+    font-style: normal;
+    line-height: 140%;
+    text-align: left;
+}
+
+.button {
+    all: unset;
+    background-color: #FAFAFA;
+    width: 213px;
+    height: 48px;
+    border-radius: 3px;
+    color: #045099;
+    margin-top: 40px;
+
+    cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    .container {
+        margin-left: 190px;
+        padding-right: 150px;
+    }
+
+    .h1 {
+        margin: 150px 0 0 0;
+        font-size: 70px;
+    }
 }
 
 @media (max-width: 1140px) {
-    .container {
-        margin-right: 10px;
+    .h1 {
+        font-size: 50px;
+    }
+
+    .text {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        margin-right: 10px;
+        margin-left: 130px;
     }
-    .h1{
-        font-size: 30px;
+
+    .h1 {
+        font-size: 40px;
     }
-    .text{
-        font-size: 25px;
+
+    .text {
+        font-size: 15px;
+    }
+
+    .backgroundImg {
+        min-height: 600px;
     }
 }
 
 @media (max-width: 576px) {
+
     .container {
-        margin-right: 0;
+        margin-left: 100px;
     }
-    .h1{
+
+    .h1 {
         font-size: 25px;
+        letter-spacing: -1.50px;
     }
-    .text{
-        font-size: 15px;
+
+    .text {
+        font-size: 13px;
+    }
+
+    .button {
+
+        width: 150px;
+        height: 28px;
+        padding: 10px;
+        margin-top: 30px;
+
     }
 }
