@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {fetchDataFromFirestore, setDataToFirestore} from "./stateReputation";
+import {fetchDataFromFirestore, setDataToFirestore} from "./stateFirebaseReputation";
 
 const initialState = {
     reputation: null as commentsResponseType[] | null

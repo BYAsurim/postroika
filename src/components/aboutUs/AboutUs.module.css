@@ -1,57 +1,118 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #f0f0f6;
-    height: 100%;
-
+    align-items: start;
+    margin: 150px 50px 0 260px;
 }
 
 .title {
-    display: inline-block;
-    margin: 50px 0 35px 10px;
-    white-space: nowrap;
-    align-self: start;
-    font-weight: bold;
-    font-size: 24px;
-
-    &:before {
-        content: '';
-        display: block;
-        position: relative;
-        background-color: #FFB400;
-        width:100%;
-        height: 4px;
-        top: 30px;
-    }
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -1.22px;
+    color: #045099;
+    margin: 0 0 40px 0;
 }
 
-.content {
-    margin: 0 20px 0 20px;
-    max-width: 1000px;
+.contentWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.img {
+    max-width: 690px;
+    max-height: 500px;
+}
+
+.wrapperText {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.subTitle {
+    max-width: 640px;
     text-align: left;
-}
-.img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 500px;
-    width: 1000px;
-    margin: 30px 0;
-}
-.checkMark{
-    height: 12px;
-    margin-right: 10px;
-}
-@media screen and (max-width: 768px) {
-.img{
-    max-width: 500px;
-    min-height: 300px;
-}
+    color: #045099;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.52px;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 365px) {
+.text {
+    max-width: 510px;
+    text-align: start;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 50px;
+}
+
+.button {
+    all: unset;
+    max-width: 250px;
+    height: 48px;
+    border-radius: 3px;
+    background-color: #045099;
+    color: #FAFAFA;
+    cursor: pointer;
+    opacity: .9;
+}
+.button:hover{
+    opacity: 1;
+}
+@media (max-width: 1600px) {
+    .wrapper {
+
+        margin: 150px 50px 0 190px;
+    }
     .img{
-        max-width: 300px;
-        min-height: 150px;
+        max-width: 550px;
     }
 }
+
+@media (max-width: 1360px) {
+.subTitle{
+    font-size: 22px
+}
+    .text{
+        font-size: 16px;
+    }
+}
+@media (max-width: 1140px) {
+.img{
+    display: none;
+}
+    .subTitle{
+        font-size: 20px;
+    }
+    .title{
+        font-size: 36px;
+    }
+    .text{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+
+        margin: 150px 50px 0 130px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+
+        margin: 150px 50px 0 100px;
+    }
+}
+
+
+
+
+
+
+
+
